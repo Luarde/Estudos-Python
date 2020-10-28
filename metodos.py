@@ -88,6 +88,10 @@ class Usuario:
     def conta_usuarios(cls):
         print(f'Classe: {cls}')
         print(f'Temos {cls.contador} usuário(s) no sistema.')
+
+    @staticmethod
+    def definicao():
+        return 'UXR344'    
     
     def __init__(self, nome, sobrenome, email, senha):
         self.__id = Usuario.contador + 1
@@ -111,3 +115,12 @@ class Usuario:
 
 user = Usuario('Felicity', 'Jones', 'felicity@gmail.com','123456')
 
+# Método estático
+
+print(Usuario.contador)
+print(Usuario.definicao())
+
+user = Usuario('Felicity', 'Jones', 'felicity@gmail.com', '123456')
+
+print(user.contador)
+print(user.definicao())
